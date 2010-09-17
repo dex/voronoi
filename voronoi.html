@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=big5">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.3  (Win32)">
+	<META NAME="CREATED" CONTENT="20041226;18015100">
+	<META NAME="CHANGEDBY" CONTENT="dex">
+	<META NAME="CHANGED" CONTENT="20041226;21581801">
+	<STYLE>
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		TD P { margin-bottom: 0.21cm }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="zh-TW" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><FONT SIZE=7 STYLE="font-size: 32pt"><SPAN LANG="en-US"><B><FONT SIZE=6 STYLE="font-size: 26pt">Design
+and Analysis of Algorithms Term Project </FONT> </B></SPAN></FONT></FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><FONT SIZE=7 STYLE="font-size: 32pt"><SPAN LANG="en-US"><U><B>Voronoi
+Diagram</B></U></SPAN></FONT></FONT></P>
+<P ALIGN=RIGHT STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=RIGHT STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT SIZE=4>系級</FONT><FONT FACE="Arial"><FONT SIZE=4><SPAN LANG="en-US">:
+</SPAN></FONT></FONT><FONT SIZE=4>資工碩 </FONT><FONT FACE="Arial"><FONT SIZE=4><SPAN LANG="en-US">95
+</SPAN></FONT></FONT><FONT SIZE=4>級</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT SIZE=4>姓名</FONT><FONT FACE="Arial"><FONT SIZE=4><SPAN LANG="en-US">:</SPAN></FONT></FONT><FONT SIZE=4>陳建華</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT SIZE=4>學號</FONT><FONT FACE="Arial"><FONT SIZE=4><SPAN LANG="en-US">:
+M933040015</SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%; page-break-before: always">
+<B>一、程式設計</B><FONT FACE="Arial"><SPAN LANG="en-US">:</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>在程式語言的部份，我選用<FONT FACE="Arial"><SPAN LANG="en-US">Trolltech</SPAN></FONT>公司的<FONT FACE="Arial"><SPAN LANG="en-US">Qt
+Framework</SPAN></FONT>來設計<FONT FACE="Arial"><SPAN LANG="en-US">GUI</SPAN></FONT>的介面，以及繪圖的部份，<FONT FACE="Arial"><SPAN LANG="en-US">Qt</SPAN></FONT>本身包含了一些好用的機制，特別是<FONT FACE="Arial"><SPAN LANG="en-US">Signals-Slots</SPAN></FONT>的機制，方便<FONT FACE="Arial"><SPAN LANG="en-US">GUI</SPAN></FONT>上各個元件的互動。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>程式中使用到<FONT FACE="Arial"><SPAN LANG="en-US">DiagramView</SPAN></FONT>、<FONT FACE="Arial"><SPAN LANG="en-US">DiagramLine</SPAN></FONT>、<FONT FACE="Arial"><SPAN LANG="en-US">DiagramPoint</SPAN></FONT>、<FONT FACE="Arial"><SPAN LANG="en-US">DiagramBisector</SPAN></FONT>等物件，這些是由我從<FONT FACE="Arial"><SPAN LANG="en-US">Qt</SPAN></FONT>本身內建的<FONT FACE="Arial"><SPAN LANG="en-US">class</SPAN></FONT>中繼承而來，這些<FONT FACE="Arial"><SPAN LANG="en-US">class</SPAN></FONT>是圖型化的物件，另外還有<FONT FACE="Arial"><SPAN LANG="en-US">2</SPAN></FONT>個物件，分別是<FONT FACE="Arial"><SPAN LANG="en-US">VoronoiAlgo</SPAN></FONT>、<FONT FACE="Arial"><SPAN LANG="en-US">ConvexHull</SPAN></FONT>，前者是整個演算法的主要架構，透過操作<FONT FACE="Arial"><SPAN LANG="en-US">Diagram</SPAN></FONT>系列的物件來完成<FONT FACE="Arial"><SPAN LANG="en-US">Voronoi
+Diagram</SPAN></FONT>，後者為計算<FONT FACE="Arial"><SPAN LANG="en-US">ConvexHull</SPAN></FONT>的部份。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>在程式的撰寫當中，必需注意線的分類，有線有三種狀態：</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=403 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=89>
+					<COL WIDTH=296>
+					<TR VALIGN=TOP>
+						<TD WIDTH=89>
+							<P ALIGN=CENTER>直線</P>
+						</TD>
+						<TD WIDTH=296>
+							<P>是一條在平面上無限延伸的線。</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=89>
+							<P ALIGN=CENTER>射線</P>
+						</TD>
+						<TD WIDTH=296>
+							<P>有一個端點，另一邊則是無限的延伸。</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=89>
+							<P ALIGN=CENTER>線段</P>
+						</TD>
+						<TD WIDTH=296>
+							<P>由兩個端點所構成。</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>一開始我沒有特意去區分三種線段的區別，我只透過線是否交於畫布的邊界來斷判是否為無限延伸，<FONT FACE="Arial"><SPAN LANG="en-US">Merge</SPAN></FONT>的時候不會有問題，但是在找<FONT FACE="Arial"><SPAN LANG="en-US">Convex
+Hull</SPAN></FONT>的時的問題就來了，所以後來在<FONT FACE="Arial"><SPAN LANG="en-US">DiagramBiesctor</SPAN></FONT>的物件裡面加了三種狀態的屬性。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>依照課本的演算法，在<FONT FACE="Arial"><SPAN LANG="en-US">Merge</SPAN></FONT>之後，必需把延伸到另一驟的線段去除，這個部份必需透過<FONT FACE="Arial"><SPAN LANG="en-US">HP</SPAN></FONT>上的每一條直線來決定線段是否要被刪除。課本上尋找<FONT FACE="Arial"><SPAN LANG="en-US">Voronoi
+Diagram -- Convex
+Hull</SPAN></FONT>的方法在一種情況下，將不能運作，就是當所有的線連成一直線時，就無法延著射線找到完整的<FONT FACE="Arial"><SPAN LANG="en-US">Convex
+Hull</SPAN></FONT>，這部份必需用例外來處理。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>在<FONT FACE="Arial"><SPAN LANG="en-US">merge</SPAN></FONT>的部候，兩點畫中垂線時，必需透過這兩點週遭的邊來找交點，交點必需是最接近線段起始點的下方，唯一的例外就是<FONT FACE="Arial"><SPAN LANG="en-US">HP</SPAN></FONT>的第一條中垂線，因為他沒有起始點，這也必需當作例外來處理。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>在<FONT FACE="Arial"><SPAN LANG="en-US">GUI</SPAN></FONT>的介面操作上，在程式左下方的<FONT FACE="Arial"><SPAN LANG="en-US">Status-Bar</SPAN></FONT>上標示出目前滑鼠所在的位置；當滑鼠移到已經存在的點上面時，會出現<FONT FACE="Arial"><SPAN LANG="en-US">Tooltips</SPAN></FONT>來顯示該點的位置；另外還有一個對話框，用來輸入特定的<FONT FACE="Arial"><SPAN LANG="en-US">X</SPAN></FONT>軸坐標和<FONT FACE="Arial"><SPAN LANG="en-US">Y</SPAN></FONT>軸坐標。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%; page-break-before: always">
+<B>二、實驗結果</B><FONT FACE="Arial"><SPAN LANG="en-US">:</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%">使用的平台為<FONT FACE="Arial"><SPAN LANG="en-US">:</SPAN></FONT></P>
+<DL>
+	<DD>
+	<TABLE WIDTH=595 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+		<COL WIDTH=184>
+		<COL WIDTH=393>
+		<TR VALIGN=TOP>
+			<TD WIDTH=184>
+				<P ALIGN=CENTER><FONT FACE="Arial"><SPAN LANG="en-US">Operation
+				System</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=393>
+				<P><FONT FACE="Arial"><SPAN LANG="en-US">Linux Gentoo 2.6</SPAN></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=184>
+				<P ALIGN=CENTER><FONT FACE="Arial"><SPAN LANG="en-US">CPU &amp;
+				RAM</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=393>
+				<P><FONT FACE="Arial"><SPAN LANG="en-US">Intel(R) Pentium(R) 4
+				CPU 1500MHz , 768M</SPAN></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=184>
+				<P ALIGN=CENTER><FONT FACE="Arial"><SPAN LANG="en-US">Compiler</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=393>
+				<P><FONT FACE="Arial"><SPAN LANG="en-US">GCC version 3.3.4
+				20040623 </SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>程式目前完成度估計約<FONT FACE="Arial"><SPAN LANG="en-US">85%</SPAN></FONT>，其中未完成的部份為處理<FONT FACE="Arial"><SPAN LANG="en-US">Convex
+Hull</SPAN></FONT>例外的部份，以及<FONT FACE="Arial"><SPAN LANG="en-US">merge</SPAN></FONT>後刪除線段的判別有小瑕疪。大致上一般的<FONT FACE="Arial"><SPAN LANG="en-US">Case</SPAN></FONT>都可以順利的完成，一些<FONT FACE="Arial"><SPAN LANG="en-US">Special
+Case</SPAN></FONT>可以因為<FONT FACE="Arial"><SPAN LANG="en-US">Convex
+Hull</SPAN></FONT>的例外而導致無窮迴圈、或是<FONT FACE="Arial"><SPAN LANG="en-US">Merge</SPAN></FONT>時找不到交點。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>因為<FONT FACE="Arial"><SPAN LANG="en-US">Qt</SPAN></FONT>本身有支援<FONT FACE="Arial"><SPAN LANG="en-US">Windows</SPAN></FONT>的版本，所以我另外編了一份可以在<FONT FACE="Arial"><SPAN LANG="en-US">Windows</SPAN></FONT>上執行的版本以及其相對應的動態連結檔<FONT FACE="Arial"><SPAN LANG="en-US">(DLLs)</SPAN></FONT>。程式中有加上判斷無窮迴圈的功能，當程式無法順利執行時，會跳出<FONT FACE="Arial"><SPAN LANG="en-US">Rum
+time error</SPAN></FONT>的對話框，接著就關閉程式。</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%">執行結果<FONT FACE="Arial"><SPAN LANG="en-US">:</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><IMG SRC="voronoi_html_m37033ed8.png" NAME="圖形1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%; page-break-before: always">
+<B>三、結論與心得</B><FONT FACE="Arial"><SPAN LANG="en-US">:</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0.5cm; line-height: 150%"><FONT FACE="Arial"><SPAN LANG="en-US">	</SPAN></FONT>因為電腦的變數並不能完整的表示出大整數，目前是使用<FONT FACE="Arial"><SPAN LANG="en-US">double</SPAN></FONT>的變數來存放所有的坐標，當交點在無限遠處時，<FONT FACE="Arial"><SPAN LANG="en-US">double</SPAN></FONT>將不能滿足問題的需求，程式可能會有不可期的錯誤發生。在這次的專題當中我體會到<FONT FACE="Arial"><SPAN LANG="en-US">Voronoi
+Diagram</SPAN></FONT>的例外之多，也很佩服發明此演算法的<FONT FACE="Arial"><SPAN LANG="en-US">M.
+I. Shamos </SPAN></FONT>和<FONT FACE="Arial"><SPAN LANG="en-US">D.
+Hoey</SPAN></FONT>，能在<FONT FACE="Arial"><SPAN LANG="en-US">nlog(n)</SPAN></FONT>的時間內完成。這次程式碼的量是我目前為止交過的程式作業當中，份量最重的一次。</P>
+</BODY>
+</HTML>
