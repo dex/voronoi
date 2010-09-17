@@ -4,6 +4,7 @@
 #include <qcanvas.h>
 #include <qvaluevector.h>
 #include <math.h>
+#include <stdlib.h>
 
 class QAction;
 class QPainter;
